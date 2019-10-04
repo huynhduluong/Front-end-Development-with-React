@@ -3,28 +3,67 @@ import { Card, CardImg, CardImgOverlay, CardText, CardBody, CardTitle } from 're
 
 class DishDetail extends Component {
 
-	render(dish){
-	    if (dish != null) {
-	      return(
-	      	<div className="row">
-	      		<div className="col-12 col-md-5 m-1">
-	    		    <Card>
-	    		      <CardImg width="100%" src={dish.image} alt={dish.name} />
-	    		      <CardBody>
-	    		        <CardTitle>{dish.name}</CardTitle>
-	    		        <CardText> {dish.description} </CardText>
-	    		      </CardBody>
-	    		    </Card>
-	    	    </div>
-	        </div>
-	      )
-	    }
-	    else {
-	      return(
-	        <div></div>
-	      )
-	    }
+	constructor(props) {
+		super(props);
+	
+		this.state = {
+		}
+		
 	  }
+
+	renderDish(dish){
+		if (dish != null) {
+		  return(
+			<div className="col-12 col-md-5 m-1">
+			  <Card>
+			  <CardImg width="100%" src={dish.image} alt={dish.name} />
+			  <CardBody>
+				<CardTitle>{dish.name}</CardTitle>
+				<CardText> {dish.description} </CardText>
+			  </CardBody>
+			  </Card>
+			</div>        
+		  )
+		}
+		else {
+		  return(
+			<div></div>
+		  )
+		}
+	  }
+	
+	renderComment(dish){
+		if (dish != null) {
+		  const comment = dish.comments.map((comments) => {
+			return (
+			  <div key={comments.id}>
+				<p>{comments.comment}</p>
+				<p>-- {comments.author} , {comments.date} </p>
+			  </div>
+			);
+		  });
+	
+		  return(
+			<div className="col-12 col-md-5 m-1">
+			  <h4>Comments</h4>
+			  {comment}
+			</div>        
+		  )
+		}
+		else {
+		  return(
+			<div></div>
+		  )
+		}
+	}
+
+	render() {	
+		return (
+			{this.renderDish(this.props.select)}
+		);
+	}
+
+
 }
 
 export default DishDetail;
