@@ -2,14 +2,12 @@ import React, { Component } from 'react';
 import { Card, CardImg, CardImgOverlay, CardText, CardBody, CardTitle } from 'reactstrap';
 
 class DishDetail extends Component {
-
-	constructor(props) {
+	constructor(props){
 		super(props);
-	
-		this.state = {
-		}
-		
-	  }
+
+    	this.state = {
+    	}
+	}
 
 	renderDish(dish){
 		if (dish != null) {
@@ -57,12 +55,15 @@ class DishDetail extends Component {
 		}
 	}
 
-	render() {	
+	render() {
+
 		return (
-			{this.renderDish(this.props.select)}
+			<div className="row">
+				{this.renderDish(this.props.isSelected)}
+				{this.renderComment(this.props.isSelected)}
+			</div>
 		);
 	}
-
 
 }
 
