@@ -22,7 +22,7 @@ import { Card, CardImg, CardText, CardBody, CardTitle } from 'reactstrap';
 		}
 	  };
 	
-	function RenderComment({dish}){
+	function RenderComment({dish}){		
 		if (dish != null) {
 		  const comment = dish.comments.map((comments) => {
 			return (

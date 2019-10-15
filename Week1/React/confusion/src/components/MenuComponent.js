@@ -1,7 +1,8 @@
 import React from 'react';
 import { Card, CardImg, CardImgOverlay, CardTitle } from 'reactstrap';
 
-function RenderMenuItem ({dish, onClick}) {
+function RenderMenuItem ({dish, onClick}) { 
+  
   return (
       <Card onClick={() => onClick(dish.id)}>
         <CardImg width="100%" src={dish.image} alt={dish.name} />
@@ -20,7 +21,7 @@ const Menu = (props) => {
           <RenderMenuItem dish={dish} onClick={props.onClick} />
       </div>
     );     
-      });
+  });
 
   return (
     <div className="container">
