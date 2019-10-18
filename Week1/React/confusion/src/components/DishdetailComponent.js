@@ -3,9 +3,7 @@ import { Card, CardImg, CardText, CardBody, CardTitle, Breadcrumb, BreadcrumbIte
 import { Link } from 'react-router-dom';
 
 	function RenderDish({dish}){
-		if (dish != null) {
-			console.log({dish});
-			
+		if (dish != null) {			
 		  return(
 			<div className="col-12 col-md-5 m-1">
 			  <Card>
@@ -25,9 +23,7 @@ import { Link } from 'react-router-dom';
 		}
 	  };
 	
-	function RenderComment({comments}){	
-		console.log({comments});
-			
+	function RenderComment({comments}){			
 		if (comments != null) {
 		  const comment = comments.map((comments) => {
 			return (
