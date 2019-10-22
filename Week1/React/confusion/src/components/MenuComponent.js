@@ -39,6 +39,7 @@ const Menu = (props) => {
       <div className="row">
           {menu}
       </div>
+      
     </div>
   );
 }
