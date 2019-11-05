@@ -1,5 +1,4 @@
 import * as ActionTypes from './ActionTypes'; // import everything they add all the exports from ActionTypes
-import { DISHES } from '../shared/dishes';
 import { baseUrl } from '../shared/baseUrl';
 
 export const addComment = (comment) => ({
