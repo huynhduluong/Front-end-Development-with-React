@@ -1,6 +1,7 @@
 import React from 'react';
 import { Breadcrumb, BreadcrumbItem, Card, CardBody, CardHeader, Media } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import { baseUrl } from '../shared/baseUrl';
 
 function RenderLeader({leaders}) {
     const leader = leaders.map((leaders) => {
@@ -8,7 +9,7 @@ function RenderLeader({leaders}) {
           <div key={leaders.id} className="col-12 mt-5">
             <Media tag="li">
               <Media left middle>
-                  <Media object src={leaders.image} alt={leaders.name} />
+                  <Media object src={baseUrl + leaders.image} alt={leaders.name} />
               </Media>
               <Media body className="ml-5">
                 <Media heading>{leaders.name}</Media>
@@ -83,7 +84,7 @@ const About = (props) => {
                     <h2>Corporate Leadership</h2>
                 </div>
                 <div className="col-12">
-                    <RenderLeader leaders={props.leaders} />
+                    <RenderLeader leaders={props.leaders.leaders} />
                 </div>
             </div>
         </div>
