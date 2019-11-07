@@ -270,6 +270,28 @@
       "message": "afadsfds",
       "date": "2017-12-04T09:41:49.890Z",
       "id": 1
+    },
+    {
+      "firstname": "Du Luong",
+      "lastname": "Huynh",
+      "telnum": "0908328143",
+      "email": "huynhduluong_95@yahoo.com.vn",
+      "agree": "false",
+      "contactType": "Tel.",
+      "message": "This is a test",
+      "date": "2019-11-07T22:33:08.988Z",
+      "id": 2
+    },
+    {
+      "firstname": "Du Luong",
+      "lastname": "Huynh",
+      "telnum": "0908328143",
+      "email": "huynhduluong_95@yahoo.com.vn",
+      "agree": true,
+      "contactType": "Email",
+      "message": "This is a second test",
+      "date": "2019-11-07T22:34:36.369Z",
+      "id": 3
     }
   ]
 }
